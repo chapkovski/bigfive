@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Make your guess
+{% endblock %}
+
+{% block content %}
+
+{% include 'guess/instructions.html' %}
+{% formfield player.guess %}
+<p></p>
+
+{% next_button %}
+
+{% endblock %}
