@@ -57,14 +57,27 @@ AGE_CHOICES =(
     (5, "51-60"),
     (6, ">60"),
 )
+
+
+ROWS_EA = (
+    (1, "The environment is a high priority in my life"),
+    (2, "I feel I have to limit my energy consumption to protect the environment"),
+)
+
+VALUES = (
+    (1, "Strongly disagree"),
+    (2, "Somewhat disagree"),
+    (3, "Neither agree nor Disagree"),
+    (4, "Somewhat agree"),
+    (5, "Strongly agree"),
+)
+
+
+
 class Player(BasePlayer):
-    age = models.PositiveIntegerField(verbose_name='What is your age?',
-                                        choices=AGE_CHOICES,
-                                        initial=None,
-                                        widget=widgets.RadioSelect)
-    gender = models.CharField(initial=None,
-                                choices=['Male', 'Female'],
-                                verbose_name='What is your gender?',
-                                widget=widgets.RadioSelect())
     bigfive = RadioGridField(rows=ROWS, values=VALUES, require_all_fields=True,
     verbose_name='I see myself as',)
+
+    EA = RadioGridField(rows=ROWS_EA, values=VALUES, require_all_fields=True,
+                        verbose_name='Please state how much you agree/disagree with the following statements')
+

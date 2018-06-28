@@ -1,8 +1,8 @@
 {% extends "global/Page.html" %}
-{% load staticfiles otree_tags %}
+{% load static otree %}
 
 {% block title %}
-    Survey: Page 2/2
+    Survey
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
     You should rate the extent to which the pair of traits applies to you,
     even if one characteristic applies more strongly than the other.
   </div>
-    {{form}}
+   {{ form }}
 
     {% next_button %}
 
