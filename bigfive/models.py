@@ -4,10 +4,10 @@ from otree.api import (
 )
 from radiogrid import RadioGridField
 
-author = 'Your name here'
+author = 'Philipp Chapkovski, chapkovski@gmail.com'
 
 doc = """
-Your app description
+Example of using RadioGrid in oTree
 """
 
 
@@ -59,25 +59,9 @@ AGE_CHOICES =(
 )
 
 
-ROWS_EA = (
-    (1, "The environment is a high priority in my life"),
-    (2, "I feel I have to limit my energy consumption to protect the environment"),
-)
-
-VALUES = (
-    (1, "Strongly disagree"),
-    (2, "Somewhat disagree"),
-    (3, "Neither agree nor Disagree"),
-    (4, "Somewhat agree"),
-    (5, "Strongly agree"),
-)
-
 
 
 class Player(BasePlayer):
     bigfive = RadioGridField(rows=ROWS, values=VALUES, require_all_fields=True,
     verbose_name='I see myself as',)
-
-    EA = RadioGridField(rows=ROWS_EA, values=VALUES, require_all_fields=True,
-                        verbose_name='Please state how much you agree/disagree with the following statements')
 

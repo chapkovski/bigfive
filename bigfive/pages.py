@@ -4,15 +4,9 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
-
-
 class BigFive(Page):
     form_model = 'player'
-    form_fields = ['bigfive', 'EA']
-
-
-
-
+    form_fields = ['bigfive', ]
 
 
 page_sequence = [
