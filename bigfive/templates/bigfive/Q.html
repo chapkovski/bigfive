@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load  otree %}
+
+{% block title %}
+    Survey. Part 2 of 2
+{% endblock %}
+
+{% block content %}
+    <div class="alert alert-primary">
+        <h5>Please answer the following questions:</h5>
+    </div>
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}

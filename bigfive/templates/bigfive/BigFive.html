@@ -1,20 +1,31 @@
 {% extends "global/Page.html" %}
-{% load static otree %}
+{% load  otree %}
 
 {% block title %}
-    Survey
+    Survey. Part 1 of 2
 {% endblock %}
 
 {% block content %}
-  <div class='well'>
-    Here are a number of personality traits that may or may
-    not apply to you. Please write a number next to each statement to indicate
-    the extent to which you agree or disagree with that statement.
-    You should rate the extent to which the pair of traits applies to you,
-    even if one characteristic applies more strongly than the other.
-  </div>
-   {{ form }}
+    <div class="card">
+        <div class="card-body">
+            Here are a number of personality traits that may or may
+            not apply to you. Please write a number next to each statement to indicate
+            the extent to which you agree or disagree with that statement.
+            You should rate the extent to which the pair of traits applies to you,
+            even if one characteristic applies more strongly than the other.
+        </div>
+    </div>
+
+
+    {% formfields %}
 
     {% next_button %}
 
+{% endblock %}
+
+{% block styles %}
+    <style>
+    .table td{
+        text-align:center;}
+    </style>
 {% endblock %}

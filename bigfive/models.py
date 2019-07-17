@@ -7,7 +7,12 @@ from radiogrid import RadioGridField
 author = 'Philipp Chapkovski, chapkovski@gmail.com'
 
 doc = """
-Example of using RadioGrid in oTree
+Big Five 10-item inventory
+
+Rammstedt, B., & John, O. P. (2007). Measuring personality in one minute or less: A 10-item short version of the 
+Big Five Inventory in English and German. Journal of research in Personality, 41(1), 203-212.
+
+https://www.westmont.edu/_academics/departments/psychology/documents/rammstedt_and_john.pdf
 """
 
 
@@ -15,41 +20,65 @@ class Constants(BaseConstants):
     name_in_url = 'bigfive'
     players_per_group = None
     num_rounds = 1
+    bigfive = {'Extraversion': [0, 5],
+               'Agreeableness': [6, 1],
+               'Conscientiousness': [2, 7],
+               'Neuroticism': [3, 8],
+               'Openness': [4, 9]}
 
 
 class Subsession(BaseSubsession):
-    pass
+    def vars_for_admin_report(self):
+        males = self.player_set.filter(gender=0)
+
+        nmales = males.count()
+        females = self.player_set.filter(gender=1).count()
+        trump_voters = self.player_set.filter(vote=1)
+        ntrump_voters = trump_voters.count()
+        if ntrump_voters > 0:
+            trump_voters_neuro = sum([i.conversion('Neuroticism') for i in trump_voters]) / ntrump_voters
+        else:
+            trump_voters_neuro = 0
+        hillary_voters = self.player_set.filter(vote=0)
+        nhillary_voters = hillary_voters.count()
+        if nhillary_voters > 0:
+            hillary_voters_neuro = sum([i.conversion('Neuroticism') for i in hillary_voters]) / nhillary_voters
+        else:
+            hillary_voters_neuro = 0
+        return {'males': nmales,
+                'females': females,
+                'trump_voters': ntrump_voters,
+                'hillary_voters': nhillary_voters,
+                'trump_voters_neuro': trump_voters_neuro,
+                'hillary_voters_neuro': hillary_voters_neuro}
 
 
 class Group(BaseGroup):
     pass
 
 
-
 ROWS = (
-    (1, "Extraverted, enthusiastic"),
-    (2, "Critical, quarrelsome"),
-    (3, "Dependable, self-disciplined"),
-    (4, "Anxious, easily upset"),
-    (5, "Open to new experiences, complex"),
-    (6, "Reserved, quiet"),
-    (7, "Sympathetic, warm"),
-    (8, 'Disorganized, careless'),
-    (9, 'Calm, emotionally stable'),
-    (10, 'Conventional, uncreative'),
+    (1, " is reserved"),
+    (2, " is generally trusting"),
+    (3, " tends to be lazy"),
+    (4, " is relaxed, handles stress well"),
+    (5, " has few artistic interests"),
+    (6, " is outgoing, sociable"),
+    (7, " tends to find fault with others"),
+    (8, ' does a thorough job'),
+    (9, ' gets nervous easily'),
+    (10, ' has an active imagination'),
 )
 
 VALUES = (
     (1, "Disagree strongly"),
-    (2, "Disagree moderately"),
-    (3, "Disagree a little"),
-    (4, "Neither agree nor Disagree"),
-    (5, "Agree a little"),
-    (6, "Agree moderately"),
-    (7, "Agree strongly"),
+    (2, "Disagree a little"),
+    (3, "Neither agree nor Disagree"),
+    (4, "Agree a little"),
+    (5, "Agree strongly"),
 )
 
-AGE_CHOICES =(
+AGE_CHOICES = (
     (1, "<20"),
     (2, "21-30"),
     (3, "31-40"),
@@ -59,9 +88,15 @@ AGE_CHOICES =(
 )
 
 
-
-
 class Player(BasePlayer):
+    age = models.IntegerField(label='Please indicate your age', choices=AGE_CHOICES)
+    gender = models.IntegerField(choices=[(0, 'Male'), (1, 'Female'), (2, 'Other')], label='What is your gender?')
+    vote = models.IntegerField(choices=[(0, 'Hillary Clinton'), (1, 'Donald Trump'), (2, 'Other'), (3, 'Did not vote')],
+                               label='Whom did you vote for in presidential elections of 2016?')
     bigfive = RadioGridField(rows=ROWS, values=VALUES, require_all_fields=True,
-    verbose_name='I see myself as',)
+                             verbose_name='I see myself as', )
+
+    def conversion(self, method):
+        i, j = Constants.bigfive[method]
+        return 6 - int(self.bigfive[i]) + int(self.bigfive[j])
 
