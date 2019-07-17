@@ -32,7 +32,17 @@ class Subsession(BaseSubsession):
         males = self.player_set.filter(gender=0)
 
         nmales = males.count()
-        females = self.player_set.filter(gender=1).count()
+        females = self.player_set.filter(gender=1)
+        nfemales = females.count()
+        if nmales > 0:
+            men_neuro = sum([i.conversion('Neuroticism') for i in males]) / nmales
+        else:
+            men_neuro = 0
+        if nmales > 0:
+            women_neuro = sum([i.conversion('Neuroticism') for i in females]) / nmales
+        else:
+            women_neuro = 0
+
         trump_voters = self.player_set.filter(vote=1)
         ntrump_voters = trump_voters.count()
         if ntrump_voters > 0:
@@ -46,11 +56,14 @@ class Subsession(BaseSubsession):
         else:
             hillary_voters_neuro = 0
         return {'males': nmales,
-                'females': females,
+                'females': nfemales,
                 'trump_voters': ntrump_voters,
                 'hillary_voters': nhillary_voters,
                 'trump_voters_neuro': trump_voters_neuro,
-                'hillary_voters_neuro': hillary_voters_neuro}
+                'hillary_voters_neuro': hillary_voters_neuro,
+                'men_neuro': men_neuro,
+                'women_neuro': women_neuro
+                }
 
 
 class Group(BaseGroup):
