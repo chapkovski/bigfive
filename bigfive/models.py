@@ -72,12 +72,12 @@ class Player(BasePlayer):
     bigfive = RadioGridField(rows=ROWS, values=VALUES, require_all_fields=True,
                              verbose_name='I see myself as', )
 
-    extraversion = models.IntegerField()
-    agreeableness = models.IntegerField()
-    conscientiousness = models.IntegerField()
-    neuroticism = models.IntegerField()
-    openness = models.IntegerField()
+    extraversion = models.FloatField()
+    agreeableness = models.FloatField()
+    conscientiousness = models.FloatField()
+    neuroticism = models.FloatField()
+    openness = models.FloatField()
 
     def conversion(self, method):
         i, j = Constants.bigfive[method]
-        return 6 - int(self.bigfive[i]) + int(self.bigfive[j])
+        return (6 - int(self.bigfive[i]) + int(self.bigfive[j]))/2
