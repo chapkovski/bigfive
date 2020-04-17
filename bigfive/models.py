@@ -20,11 +20,12 @@ class Constants(BaseConstants):
     name_in_url = 'bigfive'
     players_per_group = None
     num_rounds = 1
-    bigfive = {'Extraversion': [0, 5],
-               'Agreeableness': [6, 1],
-               'Conscientiousness': [2, 7],
-               'Neuroticism': [3, 8],
-               'Openness': [4, 9]}
+    bigfive_cate
+    bigfive = {'extraversion': [0, 5],
+               'agreeableness': [6, 1],
+               'conscientiousness': [2, 7],
+               'neuroticism': [3, 8],
+               'openness': [4, 9]}
 
 
 class Subsession(BaseSubsession):
