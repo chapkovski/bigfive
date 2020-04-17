@@ -20,51 +20,17 @@ class Constants(BaseConstants):
     name_in_url = 'bigfive'
     players_per_group = None
     num_rounds = 1
-    bigfive_cate
-    bigfive = {'extraversion': [0, 5],
-               'agreeableness': [6, 1],
-               'conscientiousness': [2, 7],
-               'neuroticism': [3, 8],
-               'openness': [4, 9]}
+
+    bigfive = dict(extraversion=[0, 5],
+                   agreeableness=[6, 1],
+                   conscientiousness=[2, 7],
+                   neuroticism=[3, 8],
+                   openness=[4, 9])
+    bigfive_categories = bigfive.keys()
 
 
 class Subsession(BaseSubsession):
-    def vars_for_admin_report(self):
-        males = self.player_set.filter(gender=0)
-
-        nmales = males.count()
-        females = self.player_set.filter(gender=1)
-        nfemales = females.count()
-        if nmales > 0:
-            men_neuro = sum([i.conversion('Neuroticism') for i in males]) / nmales
-        else:
-            men_neuro = 0
-        if nmales > 0:
-            women_neuro = sum([i.conversion('Neuroticism') for i in females]) / nmales
-        else:
-            women_neuro = 0
-
-        trump_voters = self.player_set.filter(vote=1)
-        ntrump_voters = trump_voters.count()
-        if ntrump_voters > 0:
-            trump_voters_neuro = sum([i.conversion('Neuroticism') for i in trump_voters]) / ntrump_voters
-        else:
-            trump_voters_neuro = 0
-        hillary_voters = self.player_set.filter(vote=0)
-        nhillary_voters = hillary_voters.count()
-        if nhillary_voters > 0:
-            hillary_voters_neuro = sum([i.conversion('Neuroticism') for i in hillary_voters]) / nhillary_voters
-        else:
-            hillary_voters_neuro = 0
-        return {'males': nmales,
-                'females': nfemales,
-                'trump_voters': ntrump_voters,
-                'hillary_voters': nhillary_voters,
-                'trump_voters_neuro': trump_voters_neuro,
-                'hillary_voters_neuro': hillary_voters_neuro,
-                'men_neuro': men_neuro,
-                'women_neuro': women_neuro
-                }
+    pass
 
 
 class Group(BaseGroup):
@@ -103,14 +69,15 @@ AGE_CHOICES = (
 
 
 class Player(BasePlayer):
-    age = models.IntegerField(label='Please indicate your age', choices=AGE_CHOICES)
-    gender = models.IntegerField(choices=[(0, 'Male'), (1, 'Female'), (2, 'Other')], label='What is your gender?')
-    vote = models.IntegerField(choices=[(0, 'Hillary Clinton'), (1, 'Donald Trump'), (2, 'Other'), (3, 'Did not vote')],
-                               label='Whom did you vote for in presidential elections of 2016?')
     bigfive = RadioGridField(rows=ROWS, values=VALUES, require_all_fields=True,
                              verbose_name='I see myself as', )
+
+    extraversion = models.IntegerField()
+    agreeableness = models.IntegerField()
+    conscientiousness = models.IntegerField()
+    neuroticism = models.IntegerField()
+    openness = models.IntegerField()
 
     def conversion(self, method):
         i, j = Constants.bigfive[method]
         return 6 - int(self.bigfive[i]) + int(self.bigfive[j])
-

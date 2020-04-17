@@ -9,3 +9,4 @@ _coverage_results/
 _static_root
 presentation/
 /__temp_migrations/
+/__temp*

@@ -12,4 +12,3 @@ class PlayerBot(Bot):
         big_five_values = [random.randint(1, 5) for _ in range(10)]
         big_five_answer = dict(zip(big_five_keys, big_five_values))
         yield (BigFive, big_five_answer)
-        yield (Q, {'age': random.randint(1, 6), 'gender': random.randint(0, 1), 'vote': random.randint(0, 1)})
