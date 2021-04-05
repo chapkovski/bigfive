@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2021-04-05T16:12:25.343Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="SXLax6aYLpkm6YdRO_01" version="14.5.7" type="github" pages="2">
-  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+<mxfile host="app.diagrams.net" modified="2021-04-05T16:14:19.839Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="t5MJX3zPeXITh63CRVXf" version="14.5.7" type="github" pages="3">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="baseline1">
     <mxGraphModel dx="946" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -49,7 +49,50 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="Copy of Page-1" id="P_PADWTKWYG-UWNjoBha">
+  <diagram name="forced" id="lLA0sN5nnmrerOFA_0Wp">
+    <mxGraphModel dx="946" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-0" />
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-1" parent="Ll54cYyCwkTpmE1QE3Tm-0" />
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-2" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="Ll54cYyCwkTpmE1QE3Tm-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-3" value="Quiz" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
+          <mxGeometry x="160" y="60" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-5" value="Partner from the opposite group" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
+          <mxGeometry x="250" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="Ll54cYyCwkTpmE1QE3Tm-7" target="Ll54cYyCwkTpmE1QE3Tm-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-7" value="Dictator&#39;s decision" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
+          <mxGeometry x="170" y="380" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h8FOfsR3XFHYYCfPn92G-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="Ll54cYyCwkTpmE1QE3Tm-10" target="Ll54cYyCwkTpmE1QE3Tm-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h8FOfsR3XFHYYCfPn92G-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="Ll54cYyCwkTpmE1QE3Tm-10" target="Ll54cYyCwkTpmE1QE3Tm-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-10" value="Matching" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
+          <mxGeometry x="180" y="140" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-12" value="Partner from the same group" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
+          <mxGeometry x="70" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ll54cYyCwkTpmE1QE3Tm-13" value="Payoff calculation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
+          <mxGeometry x="170" y="440" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h8FOfsR3XFHYYCfPn92G-0" value="Informing about partner&#39;s membership" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
+          <mxGeometry x="170" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="baseline2" id="P_PADWTKWYG-UWNjoBha">
     <mxGraphModel dx="946" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="y60tV24u3Wp4MaHGV5R3-0" />
