@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-05T16:14:19.839Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="t5MJX3zPeXITh63CRVXf" version="14.5.7" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-04-05T16:14:47.394Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="Iiuzu_JR5XtHDc_yPlnK" version="14.5.7" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="baseline1">
     <mxGraphModel dx="946" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -62,6 +62,9 @@
         <mxCell id="Ll54cYyCwkTpmE1QE3Tm-3" value="Quiz" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
           <mxGeometry x="160" y="60" width="120" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="h8FOfsR3XFHYYCfPn92G-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="Ll54cYyCwkTpmE1QE3Tm-5" target="h8FOfsR3XFHYYCfPn92G-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Ll54cYyCwkTpmE1QE3Tm-5" value="Partner from the opposite group" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
           <mxGeometry x="250" y="240" width="120" height="40" as="geometry" />
         </mxCell>
@@ -69,7 +72,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Ll54cYyCwkTpmE1QE3Tm-7" value="Dictator&#39;s decision" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
-          <mxGeometry x="170" y="380" width="120" height="40" as="geometry" />
+          <mxGeometry x="160" y="380" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="h8FOfsR3XFHYYCfPn92G-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="Ll54cYyCwkTpmE1QE3Tm-10" target="Ll54cYyCwkTpmE1QE3Tm-12">
           <mxGeometry relative="1" as="geometry" />
@@ -80,14 +83,20 @@
         <mxCell id="Ll54cYyCwkTpmE1QE3Tm-10" value="Matching" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
           <mxGeometry x="180" y="140" width="80" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="h8FOfsR3XFHYYCfPn92G-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="Ll54cYyCwkTpmE1QE3Tm-12" target="h8FOfsR3XFHYYCfPn92G-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Ll54cYyCwkTpmE1QE3Tm-12" value="Partner from the same group" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
           <mxGeometry x="70" y="240" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="Ll54cYyCwkTpmE1QE3Tm-13" value="Payoff calculation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
-          <mxGeometry x="170" y="440" width="120" height="40" as="geometry" />
+          <mxGeometry x="160" y="440" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h8FOfsR3XFHYYCfPn92G-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Ll54cYyCwkTpmE1QE3Tm-1" source="h8FOfsR3XFHYYCfPn92G-0" target="Ll54cYyCwkTpmE1QE3Tm-7">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="h8FOfsR3XFHYYCfPn92G-0" value="Informing about partner&#39;s membership" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="Ll54cYyCwkTpmE1QE3Tm-1">
-          <mxGeometry x="170" y="320" width="120" height="40" as="geometry" />
+          <mxGeometry x="150" y="320" width="140" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
